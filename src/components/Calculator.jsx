@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import Add from "./Add";
+import { useState } from "react";
 
 function Calculator({ operators }) {
   const numbers = [];
@@ -10,18 +11,32 @@ function Calculator({ operators }) {
     numbers.push(i);
   }
 
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [displayNumber, setDisplayNumber] = useState("");
+
+  function displayNum(number) {
+    setIsButtonClicked(true);
+    setDisplayNumber(number)
+  }
+
   return (
     <div id="calculator">
       <div id="monitor"></div>
-      <div id="pre-calc-container"></div>
+      <div id="pre-calc-container">{isButtonClicked && <p>{displayNumber}</p>}</div>
       <div id="keyboard">
         {numbers.map((number) => (
-          <button key={number} className={`calc-number ${number === "C" ? "clear-button" : ""}`}>
+          <button
+            onClick={() => {
+              displayNum(number)
+            }}
+            id={number}
+            key={number}
+            className={`calc-number ${number === "C" ? "clear-button" : ""}`}
+          >
             {number}
           </button>
         ))}
       </div>
-      <Add />
     </div>
   );
 }
