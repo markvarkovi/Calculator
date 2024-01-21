@@ -22,7 +22,7 @@ function Calculator({ operators }) {
   return (
     <div id="calculator">
       <div id="monitor"></div>
-      <div id="pre-calc-container">{isButtonClicked && <p>{displayNumber}</p>}</div>
+      <div id="pre-calc-container">{isButtonClicked && <p>{displayNumber === "C" ? '' : displayNumber }</p>}</div>
       <div id="keyboard">
         {numbers.map((number) => (
           <button
