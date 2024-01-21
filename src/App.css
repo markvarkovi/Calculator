@@ -1,0 +1,66 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#calculator {
+  background-color: rgb(95, 107, 95);
+  position: absolute;
+  top: 1%;
+  left: 58%;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: inherit;
+  width: 35%;
+  border-radius: 10px;
+  border: 20px ridge rgb(24, 29, 24);
+  font-size: large;
+}
+
+#monitor {
+  width: calc(100% - 20px); /* Adjust for any margin you want on the sides */
+  height: 300px;
+  padding: 10px; /* Or however much padding you want inside the input */
+  margin: 10px; /* This will add margin around the input */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+  border: none; /* Optional: removes the border */
+  display: block; /* Ensures it fills the width of its container */
+  font-size: 1em; /* Adjust the font size as needed */
+  color: #000; /* Text color */
+  background-color: rgb(160, 163, 160);
+  border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+#pre-calc-container {
+  width: calc(100% - 20px); /* Adjust for any margin you want on the sides */
+  height: 50px;
+  padding: 10px; /* Or however much padding you want inside the input */
+  margin: 10px; /* This will add margin around the input */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+  border: none; /* Optional: removes the border */
+  display: block; /* Ensures it fills the width of its container */
+  font-size: 1em; /* Adjust the font size as needed */
+  color: #000; /* Text color */
+  background-color: rgb(160, 163, 160);
+  border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+.calc-number {
+  width: 30%;
+  padding: 25px;
+  margin: 10px;
+  box-sizing: border-box; 
+  text-align: center; /* Center the number text */
+}
+
+.clear-button {
+  color: red;
+  font-size: x-large;
+}
+
+
+
+
+
