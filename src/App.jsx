@@ -11,7 +11,7 @@ function App() {
     <>
       <Header/>
       <Calculator
-      operators={['C','➕', '➖','✖','/',]}/>
+      operators={['C','+', '-','✖','/']}/>
     </>
   );
 }

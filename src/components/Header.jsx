@@ -8,7 +8,7 @@ function Header() {
   useEffect(() => {
     const currentHour = new Date().getHours();
     currentHour >= 0 && currentHour < 12
-      ? getDayPart(greetings[2])
+      ? getDayPart(greetings[0])
       : currentHour >= 12 && currentHour < 18
       ? getDayPart(greetings[1])
       : currentHour >= 18 && currentHour < 24
