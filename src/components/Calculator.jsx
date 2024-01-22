@@ -22,8 +22,13 @@ function Calculator({ operators }) {
       setInputValue("")
       setDisplayedValue("")
     } else if ( buttonValue === "=") {
-       setDisplayedValue(inputValue)
+       setDisplayedValue(eval(inputValue))
        setInputValue("")
+    } else if ( buttonValue === "DEL") {
+      setInputValue((prevValue) => prevValue.slice(0, -1))
+    } else if ( buttonValue === "M") {
+      setDisplayedValue("")
+        setInputValue(displayedValue)
     } else {
       setInputValue((prevValue) => prevValue + buttonValue);
     }
@@ -39,7 +44,6 @@ function Calculator({ operators }) {
             onClick={() => {
               audio.play();
               loadValues(buttonValue);
-              console.log(inputValue);
             }}
             id={buttonValue}
             key={buttonValue}
