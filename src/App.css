@@ -27,7 +27,8 @@
   box-sizing: border-box; /* Include padding and border in the element's width */
   border: none; /* Optional: removes the border */
   display: block; /* Ensures it fills the width of its container */
-  font-size: 1em; /* Adjust the font size as needed */
+  font-size: 50px; /* Adjust the font size as needed */
+  font-family: inherit;
   color: #000; /* Text color */
   background-color: rgb(160, 163, 160);
   border-radius: 10px; /* Optional: if you want rounded corners */
